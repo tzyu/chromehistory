@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.gmail.at.mrchenyu.chrome-history</string>
+	<key>connections</key>
+	<dict>
+		<key>F2EA9E66-9886-4138-A5D4-AFF27F1F303B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>49EF633D-FE51-4375-BD5B-C26528D1A0B4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Chen Yu</string>
+	<key>description</key>
+	<string>Find recent Chrome pages</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Chrome History</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string>com.google.chrome</string>
+				<key>plusspaces</key>
+				<false/>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>49EF633D-FE51-4375-BD5B-C26528D1A0B4</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>ch</string>
+				<key>runningsubtext</key>
+				<string>Fetching History {query}...</string>
+				<key>script</key>
+				<string>python chrome_history_launcher.py &lt;&lt;EOF
+ {query}
+
+EOF</string>
+				<key>subtext</key>
+				<string>Find in Google Chrome History</string>
+				<key>title</key>
+				<string>Google Chrome History</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>F2EA9E66-9886-4138-A5D4-AFF27F1F303B</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>49EF633D-FE51-4375-BD5B-C26528D1A0B4</key>
+		<dict>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+		<key>F2EA9E66-9886-4138-A5D4-AFF27F1F303B</key>
+		<dict>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
